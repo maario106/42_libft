@@ -2,7 +2,7 @@
 
 void bzero (void *s, size_t n)
 {
-    int counter;
+    size_t counter;
     char *ptr;
 
     counter = 0;

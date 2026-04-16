@@ -1,11 +1,9 @@
 #include "libft.h"
 
-#include <stdio.h>
-
 void *ft_memset(void *s, int c, size_t n)
 {
     unsigned char block;
-    int counter;
+    size_t counter;
     char *ptr;
 
     block = c;
