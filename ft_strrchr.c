@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrosas-n <mrosas-n@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/20 16:27:38 by mrosas-n          #+#    #+#             */
+/*   Updated: 2026/04/20 16:28:27 by mrosas-n         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 #include <stdio.h>
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	counter;
+	size_t	counter;	
 
 	counter = 0;
 	while (s[counter] != '\0')
