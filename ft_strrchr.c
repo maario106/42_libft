@@ -2,17 +2,40 @@
 
 #include <stdio.h>
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t counter;
+	size_t	counter;
 
-    counter = 0;
-    while(s[counter] != '\0')
-        counter++;
-    return (counter);
+	counter = 0;
+	while (s[counter] != '\0')
+		counter++;
+	return (counter);
 }
 
-char *ft_strrchr(const char *, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    
+	char	*ptr;
+
+	ptr = NULL;
+	while (*s)
+	{
+		if (*s == (char)c)
+			ptr = (char *)s;
+		s++;
+	}
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (ptr);
+}
+
+int main()
+{
+   char s[] = "pero bueno pero pero bueeeeno, que amigos";
+   char c = 'e';
+
+   printf( "s=%s\t", s );
+   printf( "c=%c\n", c );
+   printf( "strrchr=%s\n", ft_strrchr( s, c ) );
+
+   return 0;
 }

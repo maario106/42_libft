@@ -2,29 +2,17 @@
 
 #include <stdio.h>
 
-size_t ft_strlen(const char *s)
-{
-    size_t counter;
-
-    counter = 0;
-    while(s[counter] != '\0')
-        counter++;
-    return (counter);
-}
-
 char *ft_strchr(const char *s, int c)
 {
-    size_t i;
-    size_t len;
-
-    i = 0;
-    len = ft_strlen(s) + 1;
-    while (s[i] != c && i < len)
-        i++;
-    if (i == len && c != '\0')
-        return (NULL);
-    else
-        return ((char *)s + i);
+    while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (NULL);
 }
 
 int main()
@@ -33,7 +21,7 @@ int main()
     const char* str = "GeeksforGeeks:abc@123";
     // Delimiter to separate username and password
 
-    char delimiter = 'f';
+    char delimiter = 'u';
     // Find the position of the delimiter in the string
     char* delimiter_position = ft_strchr(str, delimiter);
 
