@@ -1,0 +1,40 @@
+#include "libft.h"
+
+size_t  ft_strlen(const char *s)
+{
+    size_t counter;
+
+    counter = 0;
+    while (s[counter] != '\0')
+        counter++;
+    return (counter);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	size_t	len_s1;
+	size_t	len_s2;
+	char	*ptr;
+	size_t	counter;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	ptr = (char *) malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (!ptr)
+		return (NULL);
+	counter = 0;
+	while (*s1)
+	{
+		ptr[counter++] = *s1;
+		s1++;
+	}
+	while (*s2)
+	{
+		ptr[counter++] = *s2;
+		s2++;
+	}
+	ptr[counter] = '\0';
+	return (ptr);
+}
