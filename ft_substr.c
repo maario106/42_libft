@@ -43,7 +43,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (size - start < len)
 		len = size - start;
-	ptr = malloc(sizeof(char) * (len + 1));
+	ptr = (char *) malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
 	counter = 0;
