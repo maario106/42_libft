@@ -18,7 +18,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ptr);
 }
 
+#include <stdio.h>
+
 int main(void)
 {
-	
+	char *str = "buenas1234";
+
+	printf("substr: %s\n", ft_substr(str, 4, 5));
+
+	return (0);
 }
