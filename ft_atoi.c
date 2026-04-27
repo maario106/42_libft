@@ -1,6 +1,34 @@
 #include "libft.h"
 
-int	atoi(const char *nptr)
+static int	skip_whitespace_and_signs(const char **str)
 {
-	
+	int	neg;
+
+	neg = 1;
+	while (**str == ' ' || (**str >= 9 && **str <= 13))
+		(*str)++;
+	while (**str == '+' || **str == '-')
+	{
+		if (**str == '-')
+			neg *= -1;
+		(*str)++;
+	}
+	return (neg);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	int	nbr;
+	int	is_negative;
+
+	if (!nptr || nptr[0] == '\0')
+		return (0);
+	nbr = 0;
+	is_negative = skip_whitespace_and_signs(&nptr);
+	while (*nptr && *nptr >= '0' && *nptr <= '9')
+	{
+		nbr = nbr * 10 + (int)(*nptr - '0');
+		nptr++;
+	}
+	return (nbr * is_negative);
 }
