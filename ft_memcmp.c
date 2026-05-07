@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/07 17:50:44 by codespace         #+#    #+#             */
+/*   Updated: 2026/05/07 17:50:51 by codespace        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -16,26 +28,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	if (i == n)
 		return (0);
 	return (ptr_s1[i] - ptr_s2[i]);
-}
-
-#include <stdio.h>
-
-int main() {
-    int res = 0;
-    char s1[10] = "geeks";
-    char s2[10] = "geeksa";
-
-    // Use memcmp() to compare s1 and s2 up to
-  	// length of s1
-    res = memcmp(s1, s2, strlen(s2));
-
-    // Check the result of memcmp
-    if (res > 0)
-        printf("s1 is greater:%d\n", res);
-    else if (res < 0)
-        printf("s2 is greater:%d\n", res);
-    else
-        printf("both are equal:%d\n", res);
-
-    return 0;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrosas-n <mrosas-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:16:17 by mrosas-n          #+#    #+#             */
-/*   Updated: 2026/04/20 16:19:15 by mrosas-n         ###   ########.fr       */
+/*   Updated: 2026/05/07 17:48:21 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	ptr_dest = (unsigned char *)dest;
 	ptr_src = (unsigned char *)src;
 	i = 0;
-	while  (i < n)
+	while (i < n)
 	{
 		ptr_dest[i] = ptr_src[i];
 		i++;
 	}
-    return (dest);
+	return (dest);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/07 17:49:29 by codespace         #+#    #+#             */
+/*   Updated: 2026/05/07 17:49:34 by codespace        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -11,15 +23,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		n--;
 	}
 	return ((unsigned char)*s1 - (unsigned char)*s2);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char s1[] = "_ABC";
-	char s2[] = "ABCE";
-	printf("Resultado: %d\n", ft_strncmp(s1, s2, 3));
-
-	return (0);
 }
