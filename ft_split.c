@@ -3,16 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mrosas-n <mrosas-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:56:43 by codespace         #+#    #+#             */
-/*   Updated: 2026/05/07 17:57:24 by codespace        ###   ########.fr       */
+/*   Updated: 2026/05/08 17:37:22 by mrosas-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * "hola que tal como estas"
+ * " "
+ * 
+ * "hola" "que" "tal" "como" "estas"
+ * 
+ * "4234012300001207605675670"
+ * "0"
+ * 
+ * "4234" "123" "12" "76" "56767"
+ */
+
+
 char	**ft_split(char const *s, char c)
 {
+	int	i;
+
+	if (!s)
+		return (NULL);
+
+	i = 0;
+	while(s[i])
+	{
+		if (s[i] == c)
+		{
+			i++;
+			continue;
+		}
+
+	}
+	
 	
 }
