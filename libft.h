@@ -6,7 +6,7 @@
 /*   By: mrosas-n <mrosas-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:54:40 by codespace         #+#    #+#             */
-/*   Updated: 2026/05/17 17:25:25 by mrosas-n         ###   ########.fr       */
+/*   Updated: 2026/05/17 18:34:46 by mrosas-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ char	**ft_split(char const *s, char c);
 
 // Conversión
 int		ft_atoi(const char *nptr);
+char	*ft_itoa(int n);
 
 #endif
