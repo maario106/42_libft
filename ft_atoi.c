@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mrosas-n <mrosas-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:51:42 by codespace         #+#    #+#             */
-/*   Updated: 2026/05/07 17:51:47 by codespace        ###   ########.fr       */
+/*   Updated: 2026/05/17 18:39:55 by mrosas-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	skip_whitespace_and_signs(const char **str)
 	neg = 1;
 	while (**str == ' ' || (**str >= 9 && **str <= 13))
 		(*str)++;
-	while (**str == '+' || **str == '-')
+	if (**str == '+' || **str == '-')
 	{
 		if (**str == '-')
 			neg *= -1;
