@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 18:17:47 by codespace         #+#    #+#             */
-/*   Updated: 2026/05/07 18:19:08 by codespace        ###   ########.fr       */
+/*   Updated: 2026/05/17 19:55:31 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
