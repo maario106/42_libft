@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrosas-n <mrosas-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:54:40 by codespace         #+#    #+#             */
-/*   Updated: 2026/05/17 18:34:46 by mrosas-n         ###   ########.fr       */
+/*   Updated: 2026/05/17 20:16:58 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct	s_list	*next;	
+}					t_list;
 
 // Funciones de caracteres
 int		ft_isalpha(int c);
@@ -49,9 +55,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 // Conversión
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
+
+// Funciones de descriptores de archivos
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
