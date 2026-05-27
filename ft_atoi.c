@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	skip_whitespace_and_signs(const char **str)
+static int	skip_whitespace_and_get_sign(const char **str)
 {
 	int	neg;
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *nptr)
 	if (!nptr || nptr[0] == '\0')
 		return (0);
 	nbr = 0;
-	is_negative = skip_whitespace_and_signs(&nptr);
+	is_negative = skip_whitespace_and_get_sign(&nptr);
 	while (*nptr && *nptr >= '0' && *nptr <= '9')
 	{
 		nbr = nbr * 10 + (int)(*nptr - '0');
