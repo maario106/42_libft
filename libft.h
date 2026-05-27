@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mrosas-n <mrosas-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:54:40 by codespace         #+#    #+#             */
-/*   Updated: 2026/05/27 09:50:27 by codespace        ###   ########.fr       */
+/*   Updated: 2026/05/27 12:15:46 by mrosas-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <unistd.h>
 # include <stdint.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
-	struct	s_list	*next;	
+	struct s_list	*next;	
 }					t_list;
 
 // Funciones de caracteres
