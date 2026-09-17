@@ -2,3 +2,4 @@ libftTester/
 .vscode/
 *.o
 libft.a
+*.pdf
